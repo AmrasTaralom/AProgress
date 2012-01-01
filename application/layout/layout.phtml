@@ -1,0 +1,28 @@
+<?php 
+define('BASE_URL', $this->baseUrl());
+echo $this->doctype(); 
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<head>
+<?php echo $this->headTitle(); ?>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="RGProgress" />
+<meta name="keywords" content="Rising Gods Progress RGProgress Raid Fortschritt Raidfortschritt Raids WoW World of Warcraft" />
+<?php
+echo $this->headLink()->appendStylesheet(BASE_URL.'/css/layout.css')
+					  ->headLink(array('rel' => 'icon', 'href' => BASE_URL.'/images/favicon.png', 'type'=>'image/png'), 'APPEND')
+					  ->headLink(array('rel' => 'shortcut icon', 'href' => BASE_URL.'/images/favicon.png', 'type'=>'image/png'), 'APPEND');
+/*					  
+echo $this->headScript()->appendScript(BASE_URL.'/js/mootools.js')
+					  	->appendScript(BASE_URL.'/js/slimbox.js')
+					  	->appendScript(BASE_URL.'/js/IE8.js', 'text/javascript', array('conditional' => 'lt IE 7'));
+*/?>
+</head>
+
+<body>
+	<div id="content">
+		<?php echo $this->layout()->content; ?>
+	</div>
+</body>
+</html>
